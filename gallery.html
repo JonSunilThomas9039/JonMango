@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery &mdash; Magnovite '26</title>
+    <meta name="description" content="Explore photos and captured moments from Magnovite '26." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+
+    <!-- Global Luxury Header -->
+    <header class="site-header">
+      <div class="header-container">
+        <!-- Left: Magnovite Logo -->
+        <a href="/index.html" class="nav-logo-link">
+          <img src="/logos/magnovite.png" alt="Magnovite '26" class="header-logo-magnovite" />
+        </a>
+
+        <!-- Right: MENU button + CHRIST University Logo -->
+        <div class="header-right-group">
+          <button id="menu-toggle" class="menu-toggle-btn" aria-label="Toggle Navigation Menu">
+            <div class="hamburger-icon">
+              <span class="hamburger-line top"></span>
+              <span class="hamburger-line middle"></span>
+              <span class="hamburger-line bottom"></span>
+            </div>
+          </button>
+
+          <a href="https://www.christuniversity.in/" target="_blank" class="nav-logo-link">
+            <img src="/logos/christwhite.png" alt="CHRIST University" class="header-logo-christ" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Full-Screen Editorial Mega Menu Overlay -->
+    <div id="mega-menu-overlay" class="mega-menu-overlay">
+      <div class="mega-menu-inner">
+        <!-- Left Column: Navigation Links -->
+        <nav class="mega-nav-links">
+          <a href="/index.html" class="mega-link ">
+            <span class="mega-num">01</span>
+            <span class="mega-text">Home</span>
+            <span class="mega-arrow">&#8599;</span>
+          </a>
+          <a href="/events.html" class="mega-link ">
+            <span class="mega-num">02</span>
+            <span class="mega-text">Events</span>
+            <span class="mega-arrow">&#8599;</span>
+          </a>
+          <a href="/about.html" class="mega-link ">
+            <span class="mega-num">03</span>
+            <span class="mega-text">About</span>
+            <span class="mega-arrow">&#8599;</span>
+          </a>
+          <a href="/gallery.html" class="mega-link active">
+            <span class="mega-num">04</span>
+            <span class="mega-text">Gallery</span>
+            <span class="mega-arrow">&#8599;</span>
+          </a>
+        </nav>
+
+        <!-- Middle Column: Flagship Competitions Showcase Card -->
+        <div class="mega-identity-card mega-comp-card">
+          <!-- Card Header: Eyebrow + Title & Stat Pills -->
+          <div class="mega-comp-header">
+            <div class="mega-comp-header-main">
+              <span class="mega-comp-eyebrow">EXPLORE COMPETITIONS</span>
+              <h3 class="mega-comp-title">34+ Event Arenas</h3>
+            </div>
+            <div class="mega-comp-stats">
+              <div class="mega-comp-stat">
+                <span class="mega-comp-stat-num">34+</span>
+                <span class="mega-comp-stat-lbl">EVENTS</span>
+              </div>
+              <div class="mega-comp-stat mega-comp-stat--accent">
+                <span class="mega-comp-stat-num">&#8377;5L+</span>
+                <span class="mega-comp-stat-lbl">PRIZES</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category Matrix Grid (6 Domains) -->
+          <div class="mega-cat-grid">
+            <!-- 1: Coding & AI -->
+            <a href="/events.html" class="mega-cat-card">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <h4 class="mega-cat-title">Coding &amp; AI</h4>
+              </div>
+              <p class="mega-cat-tag">Hackathons &amp; CTFs</p>
+            </a>
+
+            <!-- 2: Robotics & Tech -->
+            <a href="/events.html" class="mega-cat-card">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16.01"/><line x1="16" y1="16" x2="16" y2="16.01"/></svg>
+                </div>
+                <h4 class="mega-cat-title">Robotics &amp; Tech</h4>
+              </div>
+              <p class="mega-cat-tag">Bots &amp; Drones</p>
+            </a>
+
+            <!-- 3: Management & Pitch -->
+            <a href="/events.html" class="mega-cat-card">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <h4 class="mega-cat-title">Management &amp; Pitch</h4>
+              </div>
+              <p class="mega-cat-tag">Startups &amp; Finance</p>
+            </a>
+
+            <!-- 4: Music & Vocal -->
+            <a href="/events.html" class="mega-cat-card">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                </div>
+                <h4 class="mega-cat-title">Music &amp; Vocal</h4>
+              </div>
+              <p class="mega-cat-tag">Live Bands &amp; Vocals</p>
+            </a>
+
+            <!-- 5: Dance & Theater -->
+            <a href="/events.html" class="mega-cat-card">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <h4 class="mega-cat-title">Dance &amp; Theater</h4>
+              </div>
+              <p class="mega-cat-tag">Street Battles &amp; Stage</p>
+            </a>
+
+            <!-- 6: Gaming & Design -->
+            <a href="/events.html" class="mega-cat-card">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="6"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="15" cy="11" r="1"/><circle cx="18" cy="13" r="1"/></svg>
+                </div>
+                <h4 class="mega-cat-title">Gaming &amp; Design</h4>
+              </div>
+              <p class="mega-cat-tag">Esports &amp; CAD</p>
+            </a>
+          </div>
+
+          <!-- Card Footer: Subtext + CTA Button -->
+          <div class="mega-comp-footer">
+            <p class="mega-comp-subtext">Sixteen editions of national-level technical, cultural &amp; management excellence.</p>
+            <a href="/BROCHURE.pdf" download="BROCHURE.pdf" class="mega-comp-btn" target="_blank">
+              <span>Download Brochure</span>
+              <span class="mega-comp-btn-arrow">&#8599;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Campus Location Map, Countdown & Download Brochure Action -->
+        <div class="mega-showcase-panel">
+          <!-- Fest Key Info Header -->
+          <div class="mega-event-info-card">
+            <div class="mega-date-block">
+              <span class="mega-date-sub">FLAGSHIP FEST DATES</span>
+              <h3 class="mega-date-title">SEP 15 &ndash; 16, 2026</h3>
+            </div>
+            
+            <div class="mega-venue-block">
+              <span class="mega-venue-label">OFFICIAL VENUE</span>
+              <p class="mega-venue-name">CHRIST University Kengeri Campus</p>
+              <span class="mega-venue-sub">Kanmanike, Kumbalgodu, Mysuru Road, Bengaluru</span>
+            </div>
+          </div>
+
+          <!-- Embedded Location Map Card -->
+          <a href="https://maps.google.com/?q=CHRIST+University+Kengeri+Campus+Bangalore" target="_blank" rel="noopener noreferrer" class="mega-map-container">
+            <div class="mega-map-header">
+              <span class="mega-map-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Kengeri Campus Map
+              </span>
+              <span class="mega-map-open-link">Open Maps &#8599;</span>
+            </div>
+            <div class="mega-map-iframe-wrap">
+              <iframe 
+                src="https://maps.google.com/maps?q=CHRIST+Deemed+to+be+University+Kengeri+Campus+Bengaluru&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                width="100%" 
+                height="125" 
+                style="border:0; border-radius: 10px; filter: grayscale(0.25) contrast(1.1) invert(0.9) hue-rotate(180deg); pointer-events: none;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="CHRIST University Location Map">
+              </iframe>
+            </div>
+          </a>
+
+          <!-- Hero-Style Live Mechanical Countdown Clock Card -->
+          <div class="mega-countdown-card">
+            <span class="mega-countdown-label">COUNTDOWN TO MAGNOVITE '26</span>
+            <div class="hero-flip-clock-grid mega-flip-clock-grid">
+              <!-- DAYS -->
+              <div class="hero-flip-unit">
+                <div class="hero-flip-digits-pair">
+                  <div class="hero-flip-card mega-flip-card" id="nav-days-t" data-val="0">
+                    <div class="flip-top"><span>0</span></div>
+                    <div class="flip-bottom"><span>0</span></div>
+                    <div class="flip-leaf-top"><span>0</span></div>
+                    <div class="flip-leaf-bottom"><span>0</span></div>
+                  </div>
+                  <div class="hero-flip-card mega-flip-card" id="nav-days-u" data-val="0">
+                    <div class="flip-top"><span>0</span></div>
+                    <div class="flip-bottom"><span>0</span></div>
+                    <div class="flip-leaf-top"><span>0</span></div>
+                    <div class="flip-leaf-bottom"><span>0</span></div>
+                  </div>
+                </div>
+                <span class="hero-flip-label">DAYS</span>
+              </div>
+              <span class="hero-flip-colon">:</span>
+
+              <!-- HOURS -->
+              <div class="hero-flip-unit">
+                <div class="hero-flip-digits-pair">
+                  <div class="hero-flip-card mega-flip-card" id="nav-hours-t" data-val="0">
+                    <div class="flip-top"><span>0</span></div>
+                    <div class="flip-bottom"><span>0</span></div>
+                    <div class="flip-leaf-top"><span>0</span></div>
+                    <div class="flip-leaf-bottom"><span>0</span></div>
+                  </div>
+                  <div class="hero-flip-card mega-flip-card" id="nav-hours-u" data-val="0">
+                    <div class="flip-top"><span>0</span></div>
+                    <div class="flip-bottom"><span>0</span></div>
+                    <div class="flip-leaf-top"><span>0</span></div>
+                    <div class="flip-leaf-bottom"><span>0</span></div>
+                  </div>
+                </div>
+                <span class="hero-flip-label">HOURS</span>
+              </div>
+              <span class="hero-flip-colon">:</span>
+
+              <!-- MINUTES -->
+              <div class="hero-flip-unit">
+                <div class="hero-flip-digits-pair">
+                  <div class="hero-flip-card mega-flip-card" id="nav-mins-t" data-val="0">
+                    <div class="flip-top"><span>0</span></div>
+                    <div class="flip-bottom"><span>0</span></div>
+                    <div class="flip-leaf-top"><span>0</span></div>
+                    <div class="flip-leaf-bottom"><span>0</span></div>
+                  </div>
+                  <div class="hero-flip-card mega-flip-card" id="nav-mins-u" data-val="0">
+                    <div class="flip-top"><span>0</span></div>
+                    <div class="flip-bottom"><span>0</span></div>
+                    <div class="flip-leaf-top"><span>0</span></div>
+                    <div class="flip-leaf-bottom"><span>0</span></div>
+                  </div>
+                </div>
+                <span class="hero-flip-label">MINS</span>
+              </div>
+              <span class="hero-flip-colon">:</span>
+
+              <!-- SECONDS -->
+              <div class="hero-flip-unit">
+                <div class="hero-flip-digits-pair">
+                  <div class="hero-flip-card mega-flip-card" id="nav-secs-t" data-val="0">
+                    <div class="flip-top"><span>0</span></div>
+                    <div class="flip-bottom"><span>0</span></div>
+                    <div class="flip-leaf-top"><span>0</span></div>
+                    <div class="flip-leaf-bottom"><span>0</span></div>
+                  </div>
+                  <div class="hero-flip-card mega-flip-card" id="nav-secs-u" data-val="0">
+                    <div class="flip-top"><span>0</span></div>
+                    <div class="flip-bottom"><span>0</span></div>
+                    <div class="flip-leaf-top"><span>0</span></div>
+                    <div class="flip-leaf-bottom"><span>0</span></div>
+                  </div>
+                </div>
+                <span class="hero-flip-label">SECS</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- GALLERY HERO SECTION -->
+    <section class="events-hero-section">
+      <div class="events-hero-glow"></div>
+      <div class="events-hero-glow-2"></div>
+      <div class="events-hero-dots" aria-hidden="true">
+        <span class="edot edot-1"></span>
+        <span class="edot edot-2"></span>
+        <span class="edot edot-3"></span>
+        <span class="edot edot-4"></span>
+      </div>
+
+      <div class="events-hero-container">
+        <h1 class="hero-anim-title">GALLERY</h1>
+        <p class="events-hero-subtitle">Relive the energy, lights, and excitement. Filter through categories to explore memories across technical and cultural events.</p>
+      </div>
+    </section>
+
+    <main class="page-container" style="padding-top: 2.5rem;">
+      <!-- Category Filter Pills -->
+      <div class="controls-bar" style="margin-bottom: 2rem;">
+        <div id="gallery-categories" class="categories-wrapper">
+          <button class="category-tag active" data-filter="all">All Photos</button>
+          <button class="category-tag" data-filter="cultural">Cultural</button>
+          <button class="category-tag" data-filter="music">Music & Concerts</button>
+          <button class="category-tag" data-filter="dj">DJ Nights</button>
+          <button class="category-tag" data-filter="campus">Campus Life</button>
+        </div>
+      </div>
+      <div id="gallery-grid" class="gallery-grid"></div>
+    </main>
+
+    <!-- Interactive Lightbox Modal -->
+    <div id="gallery-modal" class="gallery-modal">
+      <div class="modal-content">
+        <button id="modal-close" class="modal-close" style="position: absolute; top: 1.5rem; right: 1.5rem; background: rgba(255,255,255,0.1); border: 1px solid var(--border-color); color: white; width: 36px; height: 36px; border-radius: 50%; font-size: 1.2rem; cursor: pointer;">&times;</button>
+        <img id="modal-img" src="" alt="Full view" />
+        <h3 id="modal-caption" style="margin-top: 1rem; color: var(--text-primary); font-family: var(--font-heading); font-size: 1.4rem;"></h3>
+      </div>
+    </div>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand" style="margin-bottom: 2.5rem;">
+          <img src="/logos/christwhite.png" alt="CHRIST University" class="footer-logo footer-logo--christ" style="height: 50px; opacity: 0.9;" />
+          <div class="footer-divider" style="height: 40px; margin: 0 0.5rem;"></div>
+          <img src="/logos/magnovite.png" alt="Magnovite '26" class="footer-logo" style="height: 38px; opacity: 0.9;" />
+        </div>
+        <div class="footer-columns" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
+          <div class="footer-col">
+            <p style="font-size: 0.9rem; line-height: 1.7; color: rgba(255, 255, 255, 0.65); max-width: 90%;">Christ University, Kengeri Campus offers a blend of traditional and world-class facilities, including department-specific buildings, libraries, research facilities, and residences, amidst the city's greenery.</p>
+          </div>
+          <div class="footer-col">
+            <p style="font-size: 0.9rem; line-height: 1.7; color: rgba(255, 255, 255, 0.65);">MAGNOVITE, the 16th edition of CHRIST University's flagship fest, fosters creativity, collaboration, healthy competition, and positive connections among participants.</p>
+            <div class="footer-social" style="margin-top: 1rem;">
+              <a href="https://www.linkedin.com/company/christ-university-faculty-of-engineering/?originalSubdomain=in" target="_blank" class="social-link" aria-label="LinkedIn">
+                <svg class="social-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg>
+              </a>
+              <a href="https://www.instagram.com/magnovite.kengeri/" target="_blank" class="social-link" aria-label="Instagram">
+                <svg class="social-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="currentColor"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/gallery.ts"></script>
+  </body>
+</html>
