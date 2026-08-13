@@ -35,6 +35,43 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+
+/* Testing a dynamic landing page*/
+/* ---- Auto-Intro Animation Locks ---- */
+body.intro-locked {
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+.hero-overlay-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Base style for all step cards */
+.hero-card-step {
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.96);
+  pointer-events: none;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Active state triggered during auto sequence */
+.hero-card-step.is-active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+/* end of the dynamic landing page */
+
+
+
 /* ============================================================
    HERO PAGE — 3D Scroll-Driven Navigation
    ============================================================ */
