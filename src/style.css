@@ -1739,6 +1739,31 @@ body {
     grid-row: span 2;
   }
 }
+/* Mobile & Tablet Bento Layout (2 Columns) */
+@media (max-width: 1023px) {
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Force 2 equal columns on mobile */
+    gap: 0.75rem; /* Tighter gaps for smaller screens */
+  }
+
+  /* Span full width (across both columns) */
+  .gallery-card.card-wide,
+  .gallery-card.card-large {
+    grid-column: span 2;
+  }
+
+  /* Span two rows tall */
+  .gallery-card.card-tall {
+    grid-row: span 2;
+  }
+
+  /* Make tall and large cards stand out vertically on mobile */
+  .gallery-card.card-tall,
+  .gallery-card.card-large {
+    min-height: 280px;
+  }
+}
 
 /* Overlay Elements */
 .gallery-overlay {
