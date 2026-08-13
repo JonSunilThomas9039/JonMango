@@ -1663,31 +1663,39 @@ body {
   color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-}
-/* ---- Gallery Grid & Bento Cards ---- */
+}/* ---- Gallery Grid & Bento Cards ---- */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  grid-auto-flow: dense;
-  grid-auto-rows: 220px;
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+  grid-auto-rows: 160px;                 /* Mobile base row height */
+  grid-auto-flow: dense;                 /* Fills grid gaps automatically */
+  gap: 0.75rem;
 }
 
+/* Desktop Grid Container */
+@media (min-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+    grid-auto-rows: 220px;                 /* Desktop base row height */
+    gap: 1.25rem;
+  }
+}
+
+/* Bento Cards */
 .gallery-card {
   position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;                           /* Prevents flex/grid height overflow */
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--border-color);
   cursor: pointer;
-  min-height: 0;
-  height: 100%;
   background-color: rgba(10, 13, 22, 0.4);
   backdrop-filter: blur(10px);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition: grid-column 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-              grid-row 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.4s ease, 
+  transition: transform 0.4s ease, 
               opacity 0.4s ease, 
               border-color 0.3s ease,
               box-shadow 0.3s ease;
@@ -1697,6 +1705,35 @@ body {
   border-color: var(--border-color);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
   transform: translateY(-2px);
+}
+
+/* Mobile Bento Spans (< 1024px) */
+@media (max-width: 1023px) {
+  .gallery-card.card-wide,
+  .gallery-card.card-large {
+    grid-column: span 2;
+  }
+
+  .gallery-card.card-tall,
+  .gallery-card.card-large {
+    grid-row: span 2;
+  }
+}
+
+/* Desktop Bento Spans (>= 1024px) */
+@media (min-width: 1024px) {
+  .gallery-card.card-wide {
+    grid-column: span 2;
+  }
+
+  .gallery-card.card-tall {
+    grid-row: span 2;
+  }
+
+  .gallery-card.card-large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
 }
 
 /* Dynamic State Modifiers */
@@ -1724,45 +1761,63 @@ body {
   transform: scale(1.06);
 }
 
-/* Desktop Bento Spans */
-@media (min-width: 1024px) {
-  .gallery-card.card-wide {
-    grid-column: span 2;
-  }
-
-  .gallery-card.card-tall {
-    grid-row: span 2;
-  }
-
-  .gallery-card.card-large {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
+/* Overlay Elements */
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(10, 13, 22, 0.95) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
 }
-/* Mobile & Tablet Bento Layout (2 Columns) */
-@media (max-width: 1023px) {
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Force 2 equal columns on mobile */
-    gap: 0.75rem; /* Tighter gaps for smaller screens */
-  }
 
-  /* Span full width (across both columns) */
-  .gallery-card.card-wide,
-  .gallery-card.card-large {
-    grid-column: span 2;
-  }
+.gallery-card:hover .gallery-overlay {
+  opacity: 1;
+}
 
-  /* Span two rows tall */
-  .gallery-card.card-tall {
-    grid-row: span 2;
-  }
+/* ---- Gallery Modal / Lightbox ---- */
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(5, 7, 12, 0.92);
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
 
-  /* Make tall and large cards stand out vertically on mobile */
-  .gallery-card.card-tall,
-  .gallery-card.card-large {
-    min-height: 280px;
-  }
+.gallery-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  transform: scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-modal.active .modal-content {
+  transform: scale(1);
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 75vh;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
 }
 
 /* Overlay Elements */
